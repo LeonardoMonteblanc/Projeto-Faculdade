@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <title>Alunos</title>
+</head>
+<body>
+    <a href="/"><button class="back-button">←</button></a>
+    <form action="{{ url_for("aluno")}}" method="post">
+    <label for="nome-completo">Nome Completo:</label>
+    <input type="text" id="nome-completo" name="nome-completo" required><br>
+
+    <label for="telefone">Número de Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" required><br>
+
+    <label for="nome-pai">Nome do Pai:</label>
+    <input type="text" id="nome-pai" name="nome-pai" required><br>
+
+    <label for="nome-mae">Nome da Mãe:</label>
+    <input type="text" id="nome-mae" name="nome-mae" required><br>
+
+    <input type="submit" value="Enviar">
+    <p>{{retorno}}</p>
+</body>
+</html>

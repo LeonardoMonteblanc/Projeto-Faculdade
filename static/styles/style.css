@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    padding: 15px;
+    width: 200px;
+}
+
+#demo {
+    justify-content: center;
+    align-items: center;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+#demo thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+#demo th,
+#demo td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+#demo tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+#demo tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+#demo tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+#demo tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+
+/* CSS */
+.back-button {
+    position: fixed;
+    top: 0;
+    left: 0;
+  align-items: center;
+  background: #FFFFFF;
+  border: 0 solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  color: #1A202C;
+  display: inline-flex;
+  font-family: Inter, sans-serif;
+  font-size: 2rem;
+  font-weight: 1000;
+  height: 56px;
+  justify-content: center;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding: 24px;
+  text-decoration: none;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}

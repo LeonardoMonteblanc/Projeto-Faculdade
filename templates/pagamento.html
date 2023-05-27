@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+    <title>Document</title>
+</head>
+<body>
+    <a href="/"><button class="back-button">←</button></a>
+
+<form action="{{ url_for("pagamento")}}" method='post'>
+    <table id="demo">
+       <head>
+        <tr>
+            <th>Pago</th>
+            <th>Aluno</th>
+            <th>Telefone</th>
+            <th>Nome do Pai</th>
+            <th>Nome da mãe</th>
+        </tr>
+       </head>
+       <tbody>
+
+        {% for row in csv %}
+        
+          <tr>
+            <td><input type="checkbox" name="check" id="" value="{{row}}"></td>
+
+          {% for col in row %}
+
+          <td>{{ col }}</td>
+          {% endfor %}
+          </tr>
+        {% endfor %}
+    </tbody>
+
+        </table>
+        <button name="submit-button" type="submit" value="Submit">Gravar informações</button>
+    </form>
+
+       <a href="/download"><button>Exportar arquivo</button></a>
+</body>
+</html>
